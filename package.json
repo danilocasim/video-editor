@@ -1,7 +1,7 @@
 {
   "name": "video-editor",
   "private": true,
-  "description": "Named, local-first HyperFrames video projects with optional ElevenLabs audio tools.",
+  "description": "AI video authoring with shared skills for OMP, Claude Code, and Codex, powered by HyperFrames.",
   "license": "MIT",
   "engines": {
     "node": ">=22.9.0"

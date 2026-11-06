@@ -24,6 +24,8 @@ function run(args, cwd) {
   const result = spawnSync("npx", ["--yes", hyperframes, ...args], {
     cwd,
     stdio: "inherit",
+    // This repository owns the bundled skill snapshot; init must not replace it.
+    env: { ...process.env, HYPERFRAMES_SKIP_SKILLS: "1" },
   });
   if (result.error) throw result.error;
   if (result.status !== 0) process.exit(result.status ?? 1);

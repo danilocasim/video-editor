@@ -12,8 +12,16 @@ node_modules/
 .DS_Store
 *.log
 
-# Locally installed agent skills and generated documentation viewer.
-/.agents/
-/.claude/
-/skills-lock.json
+# Share only portable skill packs, never local agent settings or sessions.
+/.agents/*
+!/.agents/skills/
+/.claude/*
+!/.claude/skills/
+
+# Upstream Pixabay audio is not redistributable as our raw sound library.
+/.agents/skills/media-use/audio/assets/sfx/*.mp3
+
+# Generated documentation viewer and Python helper caches.
 /doc/
+__pycache__/
+*.pyc
