@@ -1,0 +1,26 @@
+{
+  "name": "video-editor",
+  "private": true,
+  "description": "Named, local-first HyperFrames video projects with optional ElevenLabs audio tools.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.9.0"
+  },
+  "type": "module",
+  "scripts": {
+    "new": "node scripts/video.mjs new",
+    "generate": "node scripts/video.mjs generate",
+    "vo:scenes": "node --env-file-if-exists=.env.local scripts/voiceover-scenes.mjs",
+    "voiceover": "node --env-file-if-exists=.env.local scripts/voiceover.mjs",
+    "transcribe": "node --env-file-if-exists=.env.local scripts/transcribe.mjs",
+    "sound": "node --env-file-if-exists=.env.local scripts/sound.mjs",
+    "voices": "node --env-file-if-exists=.env.local scripts/voices.mjs",
+    "test": "node --test scripts/lib/*.test.mjs",
+    "dev": "node scripts/video.mjs preview",
+    "check": "node scripts/video.mjs check",
+    "render": "node scripts/video.mjs render"
+  },
+  "dependencies": {
+    "@elevenlabs/elevenlabs-js": "^2.74.0"
+  }
+}

@@ -1,0 +1,19 @@
+# Local projects, including source, assets, caches, and rendered videos.
+/videos/
+
+# Credentials stay local; only the empty setup example is public.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+node_modules/
+.DS_Store
+*.log
+
+# Locally installed agent skills and generated documentation viewer.
+/.agents/
+/.claude/
+/skills-lock.json
+/doc/
